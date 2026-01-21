@@ -1,0 +1,164 @@
+//bài 2
+public class rectangle
+{
+    private int lenght;
+    private int width;
+    public rectangle()
+    {
+        this.lenght=0;
+        this.width=0;
+    }
+    public int getlength(){
+        return this.length;
+    }
+    public void setlenght(int length)
+    {
+        this.length=length;
+    }
+    public int getwidth()
+    {
+        return this.width;
+    }
+    public void setwidth(int width)
+    {
+        this.width=width;
+    }
+    public int getArea()
+    {
+        return this Area;
+    }
+public String toString() {
+        return "length: " + this.length + "width: " +this.width;
+
+    }
+}
+//bài 1
+public class cricle
+{
+    private double radius;
+    private String color;
+    public cricle()
+    {
+        this.radius =1.0;
+        this.color ="red";
+    }
+    public cricle(double radius)
+    {
+        this.radius=radius;
+        this.color="red"
+    }
+    public cricle(double radius,String color)
+    {
+        this.radius=radius;
+        this.color=color;
+    }
+    public double getradius()
+    {
+        return this.radius;
+    }
+    public String getcolor()
+    {
+        return this.color;
+    }
+    public void setradius(double radius)
+    {
+        this.radius=radius;
+    }
+    public void setcolor()
+    {
+        this.color=color;
+    }
+    public String toString()
+    {
+      return "radius: "+this.radius+"color"+ this.color;
+    }
+   public static void main
+    //bài 3
+    public class Emloyee
+    {
+        private int id;
+        private  String firstName;
+        private String lastName;
+        private int salary;
+        public Emloyee(int id, String firstName, String lastName, int salary)
+        {
+            this.id=id;
+            this.firstName=firstName;
+            this.lastName=lastName;
+            this.salary=salary;
+        }
+        public int getid()
+        {
+            return this.id;
+        }
+        public String getfirstName()
+        {
+            return this.firstName;
+        }
+        public String getlastName()
+        {
+            return this.lastName;
+        }
+        public String getfullName()
+        {
+            return this.fullname;
+        }
+        public int getsalay()
+        {
+            return this.salary;
+        }
+        public int getannualsalay()
+        {
+            return this.annualsalay;
+        }
+        public void setsalay()
+        {
+            this.salary=salary;
+        }
+        public void upSalary(int percent) 
+        {
+        this.salary = this.salary + (this.salary * percent) / 100;
+    }
+       public String toString() {
+        return "Id: " + this.id + ", LastName: " + this.lastName + ", FirstName: " + this.firstName + ", Salary: "
+                + this.salary;
+    }
+    }
+    //bài 4
+    public class Account
+    {
+        private String id;
+        private Sting name;
+        private int balance;
+        public Account(Sting id,String name,int balance)
+        {
+            this.id=id;
+            this.name=name;
+            this.balance=balance;
+        }
+        public String getid()
+        {
+        return this.id;
+        }
+        public String getname()
+        {
+        return this.name;
+        }
+        public int getbalance()
+        {
+        return this.balance;
+        }
+        public cresdit(int amount)
+        {
+        this.amount=amount;
+        }
+        public debit(int amount)
+        {
+        this.amount=amount;
+        }
+        public tarnfer to(Account account, int amount)
+        {
+        this.Account=account;
+        this.amount=amount;
+        }
+        }
