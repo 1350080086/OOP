@@ -1,164 +1,207 @@
-//bài 2
-public class rectangle
-{
-    private int lenght;
+// bài 2
+public class Rectangle {
+    private int length;
     private int width;
-    public rectangle()
-    {
-        this.lenght=0;
-        this.width=0;
+    public Rectangle() {
+        this.length = 0;
+        this.width = 0;
     }
-    public int getlength(){
+    public Rectangle(int length, int width) {
+        this.length = length;
+        this.width = width;
+    }
+    public int getLength() {
         return this.length;
     }
-    public void setlenght(int length)
-    {
-        this.length=length;
+    public void setLength(int length) {
+        this.length = length;
     }
-    public int getwidth()
-    {
+    public int getWidth() {
         return this.width;
     }
-    public void setwidth(int width)
-    {
-        this.width=width;
+    public void setWidth(int width) {
+        this.width = width;
     }
-    public int getArea()
-    {
-        return this Area;
+    public int getArea() {
+        return this.length * this.width;
     }
-public String toString() {
+ public String toString() {
         return "length: " + this.length + "width: " +this.width;
-
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Rectangle r1 = new Rectangle();
+        r1.setLength(10);
+        r1.setWidth(5);
+        Rectangle r2 = new Rectangle(20, 15);
+        System.out.println("--- HÌNH CHỮ NHẬT 1 ---");
+        System.out.println(r1.toString());
+        System.out.println("Diện tích: " + r1.getArea());
+        System.out.println("\n--- HÌNH CHỮ NHẬT 2 ---");
+        System.out.println(r2.toString());
+        System.out.println("Diện tích: " + r2.getArea());
     }
 }
 //bài 1
-public class cricle
-{
+public class Circle {
     private double radius;
     private String color;
-    public cricle()
-    {
-        this.radius =1.0;
-        this.color ="red";
+    public Circle() {
+        this.radius = 1.0;
+        this.color = "red";
     }
-    public cricle(double radius)
-    {
-        this.radius=radius;
-        this.color="red"
+    public Circle(double radius) {
+        this.radius = radius;
+        this.color = "red"; 
     }
-    public cricle(double radius,String color)
-    {
-        this.radius=radius;
-        this.color=color;
+    public Circle(double radius, String color) {
+        this.radius = radius;
+        this.color = color;
     }
-    public double getradius()
-    {
+    public double getRadius() {
         return this.radius;
     }
-    public String getcolor()
-    {
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+    public String getColor() {
         return this.color;
     }
-    public void setradius(double radius)
-    {
-        this.radius=radius;
+    public void setColor(String color) {
+        this.color = color;
     }
-    public void setcolor()
-    {
-        this.color=color;
+    public double getCircumference() {
+        return 2 * Math.PI * radius; // Chu vi = 2 * π * r
     }
-    public String toString()
+        public String toString()
     {
       return "radius: "+this.radius+"color"+ this.color;
     }
-   public static void main
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Circle c1 = new Circle(); 
+        Circle c2 = new Circle(2.5, "blue"); 
+        System.out.println("Thông tin hình tròn:");
+        System.out.println(c.toString());
+    }
+}
     //bài 3
-    public class Emloyee
-    {
-        private int id;
-        private  String firstName;
-        private String lastName;
-        private int salary;
-        public Emloyee(int id, String firstName, String lastName, int salary)
-        {
-            this.id=id;
-            this.firstName=firstName;
-            this.lastName=lastName;
-            this.salary=salary;
-        }
-        public int getid()
-        {
-            return this.id;
-        }
-        public String getfirstName()
-        {
-            return this.firstName;
-        }
-        public String getlastName()
-        {
-            return this.lastName;
-        }
-        public String getfullName()
-        {
-            return this.fullname;
-        }
-        public int getsalay()
-        {
-            return this.salary;
-        }
-        public int getannualsalay()
-        {
-            return this.annualsalay;
-        }
-        public void setsalay()
-        {
-            this.salary=salary;
-        }
-        public void upSalary(int percent) 
-        {
-        this.salary = this.salary + (this.salary * percent) / 100;
+class Employee {
+    private int id;
+    private String firstName;
+    private String lastName;
+    private int salary;
+    public Employee(int id, String firstName, String lastName, int salary) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.salary = salary;
     }
-       public String toString() {
-        return "Id: " + this.id + ", LastName: " + this.lastName + ", FirstName: " + this.firstName + ", Salary: "
-                + this.salary;
-    }
-    }
-    //bài 4
-    public class Account
-    {
-        private String id;
-        private Sting name;
-        private int balance;
-        public Account(Sting id,String name,int balance)
-        {
-            this.id=id;
-            this.name=name;
-            this.balance=balance;
-        }
-        public String getid()
-        {
+    public int getId() {
         return this.id;
-        }
-        public String getname()
-        {
-        return this.name;
-        }
-        public int getbalance()
-        {
+    }
+    public String getFirstName() {
+        return this.firstName;
+    }
+    public String getLastName() {
+        return this.lastName;
+    }
+    public String getName() {
+        return this.firstName + " " + this.lastName;
+    }
+    public int getSalary() {
+        return this.salary;
+    }
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+    public int getAnnualSalary() {
+        return this.salary * 12;
+    }
+    public int raiseSalary(int percent) {
+        this.salary = this.salary + (this.salary * percent) / 100;
+        return this.salary;
+    }
+    public String toString() {
+        return "Employee[id=" + id + ", name=" + getName() + ", salary=" + salary + "]";
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Employee e1 = new Employee(101, "Nguyễn", "Văn An", 1500);
+        System.out.println("--- Thông tin nhân viên ---");
+        System.out.println(e1.toString());
+        System.out.println("Họ tên: " + e1.getName());
+        System.out.println("Lương hằng năm: " + e1.getAnnualSalary());
+        System.out.println("\n--- Thực hiện tăng lương 10% ---");
+        e1.raiseSalary(10);
+        System.out.println("Mức lương mới hằng tháng: " + e1.getSalary());
+        System.out.println("Thông tin cập nhật: " + e1.toString());
+    }
+}
+    //bài 4
+   // 1. Lớp định nghĩa Tài khoản (Account)
+class Account {
+    private String id;
+    private String name;
+    private int balance = 0;
+    public Account(String id, String name, int balance) {
+        this.id = id;
+        this.name = name;
+        this.balance = balance;
+    }
+    public String getId() {
+        return id;
+    }
+    public String getName() {
+        return name;
+    }
+    public int getBalance() {
+        return balance;
+    }
+    public int credit(int amount) {
+        this.balance += amount; // Cộng tiền vào số dư
         return this.balance;
+    }
+    public int debit(int amount) {
+        if (amount <= balance) {
+            this.balance -= amount; // Trừ tiền nếu đủ số dư
+        } else {
+            System.out.println("Số dư không đủ để rút " + amount);
         }
-        public cresdit(int amount)
-        {
-        this.amount=amount;
+        return this.balance;
+    }
+    public int transferTo(Account another, int amount) {
+        if (amount <= balance) {
+            this.balance -= amount;    
+            another.credit(amount);     
+            System.out.println("Chuyển thành công " + amount + " cho " + another.getName());
+        } else {
+            System.out.println("Số dư không đủ để chuyển khoản!");
         }
-        public debit(int amount)
-        {
-        this.amount=amount;
-        }
-        public tarnfer to(Account account, int amount)
-        {
-        this.Account=account;
-        this.amount=amount;
-        }
-        }
+        return this.balance;
+    }
+    public String toString() {
+        return "Account(id=" + id + ", name=" + name + ", balance=" + balance + ")";
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Account a1 = new Account("A101", "Tan", 500);
+        Account a2 = new Account("A102", "An", 100);
+        System.out.println("Trạng thái ban đầu:");
+        System.out.println(a1);
+        System.out.println(a2);
+        System.out.println("\n--- Nạp 200 vào tài khoản Tan ---");
+        a1.credit(200);
+        System.out.println("\n--- Tan chuyển 300 cho An ---");
+        a1.transferTo(a2, 300);
+        System.out.println("\nTrạng thái sau giao dịch:");
+        System.out.println(a1);
+        System.out.println(a2);
+    }
+}
