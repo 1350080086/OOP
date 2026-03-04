@@ -1,0 +1,215 @@
+BAÌ 1
+class HinhHoc {
+    void dientich() {
+        System.out.println("Tinh dien tich");
+    }
+public class HinhTron extends HinhHoc {
+    private double banKinh;
+    public HinhTron(double banKinh) {
+        this.banKinh = banKinh;
+    }
+    @Override
+    void dienTich() {
+        double dientich = Math.PI * banKinh * banKinh;
+        System.out.println("Dien tich hinh tron: " + dientich);
+    }
+}
+public class HinhChuNhat extends HinhHoc {
+    private double chieudai;
+    private double chieurong;
+
+    public HinhChuNhat(double chieuDai, double chieurong) {
+        this.chieudai = chieudai;
+        this.chieurong = chieurong;
+    }
+    @Override
+    void dientich() {
+        double dientich = chieudai * chieurong;
+        System.out.println("Dien tich hinh chu nhat: " + dientich);
+    }
+}
+    public static void main(String[] args) {
+     HinhTron.h1 = new HinhTron(4);
+     HinhChuNhat.h2 = new HinhChuNhat(4, 6);
+     h1.dientich();
+     h2.dientich();
+    }
+}
+BÀI 2
+class Animal {
+    public void makeSound() {
+        System.out.println("Tieng keu cua dong vat");
+    }
+class Pig extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Pig keu: un in");
+    }
+}
+class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("gau gau");
+    }
+}
+class Cat extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("meo meo");
+    }
+}
+class Brid extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("chíp chíp");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Animal.Pig  = new Pig();
+        Animal.Dog = new Dog();
+        Animal.Cat = new Cat();
+        Animal.Brid = new Brid();
+        Pig.makeSound();
+        Dog.makeSound();
+        Cat.makeSound();
+        Brid.makeSound();
+    }
+  }
+}
+BÀI 3
+class XeDap{
+    public void run() {
+        System.out.println("Chay bang suc nguoi");
+    }
+class XeDapDien extends XeDap {
+    @Override
+    public void run() {
+        System.out.println("Chay bang dien");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        XeDap h1 = new XeDap();
+        XeDapDien h2 = new XeDapDien();
+        h1.run();
+        h2.run();
+    }
+}
+BÀI 4
+class Person {
+    private String name;
+    private String birthday;
+    public void setName(String name) {
+      this.name = name; 
+}
+    public void setBirthday(String birthday) {
+      this.birthday = birthday;
+}
+    public String getDetails() {
+        return "Name: " + this.name + ", Birthday: " + this.birthday;
+    }
+class Employee extends Person {
+    private double salary;
+    public void setSalary(double salary) {
+      this.salary = salary; 
+}
+    @Override
+    public String getDetails() {
+        return super.getDetails() + ", Salary: " + salary;
+    }
+}
+class Manager extends Employee {
+    private Employee assistant;
+    public void setAssistant(Employee assistant) {
+        this.assistant = assistant;
+    }
+    @Override
+    public String getDetails() {
+        String info = super.getDetails()+"Assistant"+assistan.getDetail();
+    }
+}
+public static void main(String[] args) {
+    Employee n = new Employee();
+    n.setName("Nguyen");
+    n.setbrithday("10-02-2008");
+    n.setSalary(500);
+    Manager m = new Manager();
+    m.setName("Tan");
+    m.setbrithday("10-02-2003");
+    m.setSalary(2000);
+    m.setAssistant(n);
+    System.out.println(m.getDetails());
+  }
+}
+BÀI 5
+class Bank {
+    public double getRate() {
+        return 0;
+    }
+class SBI extends Bank {
+    @Override
+    public double getRate() {
+        return 8;
+    }
+}
+class ICICI extends Bank {
+    @Override
+    public double getRate() {
+        return 7;
+    }
+}
+class AXIS extends Bank {
+    @Override
+    public double getRate() {
+        return 9;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Bank b1 = new SBI();
+        Bank b2 = new ICICI();
+        Bank b3 = new AXIS();
+
+        System.out.println("SBI Rate: " + b1.getRate());   
+        System.out.println("ICICI Rate: " + b2.getRate()); 
+        System.out.println("AXIS Rate: " + b3.getRate());  
+    }
+  }
+}
+BÀI 6
+class Car {
+    public void move() {
+        System.out.println("Xe đang di chuyển...");
+    }
+class LandRover extends Car {
+    @Override
+    public void move() {
+        System.out.println("LandRover đang vượt địa hình gồ ghề.");
+    }
+}
+
+class Ford extends Car {
+    @Override
+    public void move() {
+        System.out.println("Ford đang chạy trên đường cao tốc.");
+    }
+}
+
+class Honda extends Car {
+    @Override
+    public void move() {
+        System.out.println("Honda đang di chuyển tiết kiệm nhiên liệu trong phố.");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        myCar = new LandRover();
+        myCar.move();
+        myCar = new Ford();
+        myCar.move();
+        myCar = new Honda();
+        myCar.move(); 
+    }
+  }
+}
